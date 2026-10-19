@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2B1B2A">
+  <title>Politique de confidentialité — LM La Déco for Party</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles de LM La Déco for Party. Découvrez comment vos informations sont protégées dans le respect du RGPD.">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum: #2B1B2A;
+      --plum-2: #3A2635;
+      --plum-3: #4A2F41;
+      --ivory: #FBF6EF;
+      --ivory-2: #F3EAD9;
+      --cream: #FBF8F3;
+      --rose: #A8474B;
+      --rose-light: #C97A73;
+      --gold: #C9A227;
+      --gold-light: #E4C56B;
+      --card-bg: #FFFFFF;
+      --text: #2B1B2A;
+      --text-muted: #574454;
+      --line-on-dark: rgba(251, 246, 239, 0.16);
+      --line-on-light: rgba(43, 27, 42, 0.08);
+      --border-accent: rgba(201, 162, 39, 0.28);
+      --maxw: 920px;
+      --ease: cubic-bezier(.22, .61, .36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--plum);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s var(--ease);
+    }
+
+    a:hover {
+      color: var(--rose);
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      background: var(--plum);
+      color: var(--ivory);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+      border-bottom: 1px solid var(--line-on-dark);
+    }
+
+    .header-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ivory);
+      text-decoration: none;
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .brand em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: block;
+      transition: transform 0.3s var(--ease);
+    }
+
+    .brand:hover .brand-logo {
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: rgba(251, 246, 239, 0.08);
+      color: var(--ivory);
+      text-decoration: none;
+      border: 1px solid var(--line-on-dark);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.25s var(--ease);
+    }
+
+    .back-btn:hover {
+      background: var(--gold-light);
+      color: var(--plum);
+      border-color: var(--gold-light);
+      transform: translateX(-2px);
+    }
+
+    .back-btn svg {
+      transition: transform 0.25s var(--ease);
+    }
+
+    .back-btn:hover svg {
+      transform: translateX(-3px);
+    }
+
+    /* ---------- Hero Banner ---------- */
+    .hero-banner {
+      background: radial-gradient(circle at 85% 15%, rgba(201, 162, 39, 0.12) 0%, transparent 60%),
+                  linear-gradient(135deg, var(--plum) 0%, var(--plum-2) 100%);
+      color: var(--ivory);
+      padding: 64px 24px 56px;
+      position: relative;
+      border-bottom: 1px solid var(--border-accent);
+    }
+
+    .hero-wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-light);
+    }
+
+    .hero-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--ivory);
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(251, 246, 239, 0.85);
+      max-width: 68ch;
+      margin-bottom: 24px;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(251, 246, 239, 0.1);
+      border: 1px solid rgba(251, 246, 239, 0.16);
+      font-size: 0.84rem;
+      color: var(--ivory);
+    }
+
+    .meta-badge svg {
+      color: var(--gold-light);
+    }
+
+    /* ---------- Main Layout ---------- */
+    .page-main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 48px 24px 90px;
+    }
+
+    /* Intro message box */
+    .intro-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 30px rgba(43, 27, 42, 0.04);
+      position: relative;
+    }
+
+    .intro-card p {
+      color: var(--text);
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .intro-card strong {
+      color: var(--plum);
+    }
+
+    /* Table of contents */
+    .toc-card {
+      background: rgba(243, 234, 217, 0.45);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 44px;
+    }
+
+    .toc-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px 20px;
+      list-style: none;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      color: var(--plum);
+      text-decoration: none;
+      font-size: 0.92rem;
+      padding: 4px 0;
+      transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+
+    .toc-num {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--rose);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc-link:hover {
+      color: var(--rose);
+      transform: translateX(3px);
+      text-decoration: underline;
+    }
+
+    /* Section Cards */
+    .policy-section {
+      background: var(--card-bg);
+      border: 1px solid var(--line-on-light);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 20px rgba(43, 27, 42, 0.03);
+      scroll-margin-top: 100px;
+      transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    }
+
+    .policy-section:hover {
+      border-color: rgba(201, 162, 39, 0.35);
+      box-shadow: 0 8px 32px rgba(43, 27, 42, 0.06);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line-on-light);
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(168, 71, 75, 0.1);
+      color: var(--rose);
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.4rem, 2.8vw, 1.75rem);
+      font-weight: 600;
+      color: var(--plum);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .section-content p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-content strong {
+      color: var(--plum);
+      font-weight: 600;
+    }
+
+    .section-content h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--plum);
+      margin: 24px 0 12px;
+    }
+
+    /* List styling */
+    .styled-list {
+      list-style: none;
+      margin: 16px 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .styled-list li {
+      position: relative;
+      padding-left: 26px;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .styled-list li::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* Contact Details Card within Section */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .info-card {
+      background: var(--cream);
+      border: 1px solid var(--line-on-light);
+      border-radius: 14px;
+      padding: 20px 22px;
+    }
+
+    .info-card dt {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--rose);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .info-card dd {
+      font-size: 1.02rem;
+      color: var(--plum);
+      font-weight: 500;
+      word-break: break-word;
+    }
+
+    .info-card dd a {
+      color: var(--plum);
+      font-weight: 600;
+    }
+
+    /* Highlight callout box */
+    .highlight-box {
+      background: rgba(201, 162, 39, 0.09);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--plum);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Rights Cards Grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .right-card {
+      background: var(--cream);
+      border: 1px solid var(--line-on-light);
+      border-radius: 14px;
+      padding: 22px;
+      transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+    }
+
+    .right-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(201, 162, 39, 0.4);
+    }
+
+    .right-card h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      color: var(--plum);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .right-card p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Direct Contact Banner */
+    .contact-banner {
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum-2) 100%);
+      color: var(--ivory);
+      border-radius: 20px;
+      padding: 44px;
+      margin-top: 48px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(43, 27, 42, 0.15);
+      border: 1px solid var(--border-accent);
+    }
+
+    .contact-banner h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.85rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--ivory);
+    }
+
+    .contact-banner p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(251, 246, 239, 0.85);
+      max-width: 58ch;
+      margin: 0 auto 28px;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: var(--gold-light);
+      color: #281B28;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s var(--ease);
+    }
+
+    .btn-gold:hover {
+      background: #FFF0C7;
+      color: #281B28;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: var(--ivory);
+      border: 1px solid rgba(251, 246, 239, 0.35);
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s var(--ease);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(251, 246, 239, 0.1);
+      border-color: var(--gold-light);
+      color: var(--ivory);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: #211421;
+      color: var(--ivory);
+      padding: 56px 24px 32px;
+      border-top: 1px solid var(--line-on-dark);
+    }
+
+    .footer-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 14px;
+    }
+
+    .footer-brand p {
+      color: rgba(251, 246, 239, 0.72);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 38ch;
+    }
+
+    .footer-col h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      color: var(--ivory);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(251, 246, 239, 0.78);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s var(--ease);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(251, 246, 239, 0.08);
+      border: 1px solid var(--line-on-dark);
+      color: var(--ivory);
+      text-decoration: none;
+      transition: all 0.25s var(--ease);
+    }
+
+    .footer-social a:hover {
+      background: var(--gold-light);
+      color: var(--plum);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      border-top: 1px solid var(--line-on-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.85rem;
+      color: rgba(251, 246, 239, 0.6);
+    }
+
+    .footer-bottom a {
+      color: rgba(251, 246, 239, 0.75);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold-light);
+    }
+
+    /* Floating Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--plum);
+      color: var(--ivory);
+      border: 1px solid var(--line-on-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: all 0.25s var(--ease);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--gold-light);
+      color: var(--plum);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-banner {
+        padding: 48px 20px 40px;
+      }
+
+      .page-main {
+        padding: 36px 18px 70px;
+      }
+
+      .policy-section {
+        padding: 28px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================================== -->
+  <!-- HEADER DU SITE -->
+  <!-- ====================================================================== -->
+  <header class="site-header">
+    <div class="header-wrap">
+      <a href="index.html" class="brand" aria-label="LM La Déco for Party — Retour à l'accueil">
+        <img src="images/brand-logo.png" alt="Logo LM La Déco for Party" class="brand-logo" width="44" height="44">
+        <span>LM La Déco <em>for Party</em></span>
+      </a>
+
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Retour au site</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ====================================================================== -->
+  <!-- HERO BANNER -->
+  <!-- ====================================================================== -->
+  <section class="hero-banner">
+    <div class="hero-wrap">
+      <div class="eyebrow">Protection des données personnelles</div>
+      <h1 class="hero-title">Politique de confidentialité</h1>
+      <p class="hero-subtitle">
+        Chez LM La Déco for Party, chaque événement est conçu avec soin et bienveillance. Cette attention s’applique naturellement à la sécurité et à la confidentialité des informations personnelles que vous nous confiez.
+      </p>
+
+      <div class="meta-badges">
+        <div class="meta-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Dernière mise à jour : <strong>17 octobre 2026</strong></span>
+        </div>
+
+        <div class="meta-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Conforme RGPD &amp; Recommandations CNIL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- MAIN CONTENT -->
+  <!-- ====================================================================== -->
+  <main class="page-main">
+
+    <!-- Cadre introductif chaleureux et rassurant -->
+    <div class="intro-card">
+      <p>
+        La présente politique détaille en toute transparence la manière dont <strong>Nathalie Le Magoariec</strong>, responsable de <strong>LM La Déco for Party</strong>, recueille, utilise, conserve et protège vos données personnelles lorsque vous consultez notre site web ou formulez une demande de devis en ligne. Nous veillons scrupuleusement au respect du <strong>Règlement Général sur la Protection des Données (RGPD n° 2016/679)</strong> et de la loi française <strong>Informatique et Libertés n° 78-17 modifiée</strong>.
+      </p>
+    </div>
+
+    <!-- Sommaire interactif -->
+    <nav class="toc-card" aria-label="Sommaire de la politique de confidentialité">
+      <h2 class="toc-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Sommaire
+      </h2>
+      <ul class="toc-grid">
+        <li><a href="#responsable" class="toc-link"><span class="toc-num">01.</span> Responsable du traitement</a></li>
+        <li><a href="#donnees" class="toc-link"><span class="toc-num">02.</span> Données collectées et finalités</a></li>
+        <li><a href="#base-legale" class="toc-link"><span class="toc-num">03.</span> Base légale du traitement</a></li>
+        <li><a href="#destinataires" class="toc-link"><span class="toc-num">04.</span> Destinataires et sous-traitants</a></li>
+        <li><a href="#duree" class="toc-link"><span class="toc-num">05.</span> Durée de conservation (CNIL)</a></li>
+        <li><a href="#droits" class="toc-link"><span class="toc-num">06.</span> Vos droits et recours</a></li>
+        <li><a href="#cookies" class="toc-link"><span class="toc-num">07.</span> Cookies et mesure d'audience</a></li>
+        <li><a href="#securite" class="toc-link"><span class="toc-num">08.</span> Sécurité de vos données</a></li>
+        <li><a href="#modifications" class="toc-link"><span class="toc-num">09.</span> Modifications de la politique</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <article class="policy-section" id="responsable">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">01</span>
+        <h2 class="section-title">Responsable du traitement</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Le responsable du traitement des données personnelles collectées sur le site est l'entreprise individuelle gérée par <strong>Nathalie Le Magoariec</strong>.
+        </p>
+
+        <dl class="info-grid">
+          <div class="info-card">
+            <dt>Responsable</dt>
+            <dd>Nathalie Le Magoariec</dd>
+          </div>
+          <div class="info-card">
+            <dt>Nom commercial</dt>
+            <dd>LM La Déco for Party</dd>
+          </div>
+          <div class="info-card">
+            <dt>Adresse e-mail</dt>
+            <dd><a href="mailto:lmladecoforparty@gmail.com">lmladecoforparty@gmail.com</a></dd>
+          </div>
+          <div class="info-card">
+            <dt>Téléphone</dt>
+            <dd><a href="tel:+33625822220">06 25 82 22 20</a></dd>
+          </div>
+        </dl>
+
+        <p>
+          Pour toute question relative à la protection de vos données ou pour toute demande d'exercice de vos droits, vous pouvez vous adresser directement à Nathalie Le Magoariec par courriel ou par téléphone.
+        </p>
+      </div>
+    </article>
+
+    <!-- SECTION 2 -->
+    <article class="policy-section" id="donnees">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">02</span>
+        <h2 class="section-title">Données collectées et finalités</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Nous limitons la collecte des données personnelles au strict nécessaire (principe de minimisation des données) pour vous accompagner dans la création et l'installation de votre scénographie événementielle.
+        </p>
+
+        <h3>Données recueillies</h3>
+        <p>Lorsque vous complétez notre formulaire de demande de devis en ligne ou nous contactez directement par message ou téléphone, nous pouvons recueillir :</p>
+        <ul class="styled-list">
+          <li><strong>Vos coordonnées et identité :</strong> nom, prénom, adresse e-mail, numéro de téléphone portable.</li>
+          <li><strong>Les caractéristiques de votre événement :</strong> type d'événement (mariage, anniversaire d'adulte ou d'enfant, baby shower, baptême, soirée d'entreprise, gender reveal…), date de la réception, lieu ou ville d'intervention (Paris 75, Seine-Saint-Denis 93, Val-d'Oise 95, Oise 60…).</li>
+          <li><strong>Vos souhaits décoratifs :</strong> espaces à décorer (table d'honneur, coin photos/photobooth, candy bar, entrée…), éléments désirés (arche de ballons organique, structures rétroéclairées, enseignes néon, papeterie personnalisée…), budget prévisionnel estimé.</li>
+          <li><strong>Le contenu de vos messages :</strong> précisions, inspirations visuelles et demandes spécifiques partagées dans le champ libre du formulaire.</li>
+        </ul>
+
+        <div class="highlight-box">
+          <p>
+            <strong>Note importante :</strong> nous ne vous demandons aucune information bancaire via le site web, ni aucune donnée sensible au sens de la réglementation (données de santé, opinions philosophiques ou politiques, croyances religieuses). Nous vous recommandons de ne pas renseigner de telles informations dans le champ libre du formulaire.
+          </p>
+        </div>
+
+        <h3>Finalités de l'utilisation</h3>
+        <p>Vos données sont exclusivement recueillies pour les finalités précises et légitimes suivantes :</p>
+        <ul class="styled-list">
+          <li>L'analyse technique et esthétique de votre projet événementiel et le calcul du chiffrage détaillé.</li>
+          <li>L'élaboration et l'envoi de votre devis personnalisé ainsi que nos échanges préparatoires.</li>
+          <li>La gestion de la relation précontractuelle puis contractuelle (planification des créneaux de montage, installation sur le lieu de réception, démontage et facturation).</li>
+          <li>Le suivi de la satisfaction client et la réponse à vos sollicitations spontanées.</li>
+          <li>Le respect de nos obligations administratives, fiscales et comptables légales.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECTION 3 -->
+    <article class="policy-section" id="base-legale">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">03</span>
+        <h2 class="section-title">Base légale du traitement</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Conformément à l'article 6 du RGPD, tout traitement de données personnelles repose sur une base juridique licite clairement établie :
+        </p>
+
+        <ul class="styled-list">
+          <li>
+            <strong>Exécution de mesures précontractuelles ou contractuelles (Art. 6.1.b du RGPD) :</strong> le recueil de vos coordonnées et des détails de votre événement est indispensable pour vous répondre, établir un devis conforme à vos souhaits et, le cas échéant, exécuter la prestation scénographique convenue. Sans ces données, il nous est impossible de concevoir et chiffrer votre décor.
+          </li>
+          <li>
+            <strong>Intérêt légitime de l'entreprise (Art. 6.1.f du RGPD) :</strong> assurer le suivi professionnel de nos contacts, prévenir d'éventuels abus ou fraudes informatiques et garantir la sécurité technique du site web.
+          </li>
+          <li>
+            <strong>Obligations légales et réglementaires (Art. 6.1.c du RGPD) :</strong> la conservation des factures, contrats et pièces comptables exigée par le Code de commerce et le Code général des impôts français une fois une prestation validée.
+          </li>
+          <li>
+            <strong>Consentement exprès (Art. 6.1.a du RGPD) :</strong> pour toute publication éventuelle d'une photo de votre décor mettant en scène des personnes identifiables ou pour la reproduction d'un témoignage nominatif sur nos supports de communication, un accord écrit et préalable est expressément sollicité.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECTION 4 -->
+    <article class="policy-section" id="destinataires">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">04</span>
+        <h2 class="section-title">Destinataires et prestataires techniques</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Vos données personnelles sont strictement confidentielles. Elles ne font l’objet d’<strong>aucune vente, aucune location, aucun échange ni aucune cession commerciale</strong> à des tiers à des fins promotionnelles.
+        </p>
+
+        <h3>Destinataire principal</h3>
+        <p>
+          La destinataire exclusive de vos demandes est <strong>Nathalie Le Magoariec</strong>, fondatrice et décoratrice de LM La Déco for Party.
+        </p>
+
+        <h3>Prestataires et sous-traitants techniques</h3>
+        <p>
+          Pour assurer l'acheminement et le traitement sécurisé de vos messages, nous faisons appel à des prestataires informatiques spécialisés qui agissent en qualité de sous-traitants au sens du RGPD :
+        </p>
+        <ul class="styled-list">
+          <li>
+            <strong>FormSubmit (formsubmit.co) :</strong> ce prestataire technique assure la passerelle sécurisée d'envoi du formulaire de devis en ligne directement vers notre messagerie électronique professionnelle (<code>lmladecoforparty@gmail.com</code>). FormSubmit traite les informations de manière chiffrée uniquement pour transmettre le courriel, sans les exploiter à des fins publicitaires.
+          </li>
+          <li>
+            <strong>Fournisseur de messagerie (Google Workspace / Gmail) :</strong> hébergement sécurisé des courriels reçus et de nos échanges professionnels.
+          </li>
+          <li>
+            <strong>Hébergeur web statique :</strong> diffusion et hébergement des fichiers publics du site internet sous protocole sécurisé HTTPS.
+          </li>
+        </ul>
+        <p>
+          Chaque prestataire technique a été sélectionné pour ses garanties élevées en matière de sécurité, de confidentialité et de conformité aux normes européennes de protection des données (clauses contractuelles types ou équivalents).
+        </p>
+      </div>
+    </article>
+
+    <!-- SECTION 5 -->
+    <article class="policy-section" id="duree">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">05</span>
+        <h2 class="section-title">Durée de conservation des données</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Nous conservons vos données uniquement pendant la durée strictement nécessaire aux finalités pour lesquelles elles ont été recueillies, dans le respect des recommandations officielles de la <strong>CNIL (Commission Nationale de l'Informatique et des Libertés)</strong> :
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <dt>Demandes de devis / Prospects</dt>
+            <dd><strong>3 ans</strong> à compter du dernier contact</dd>
+          </div>
+          <div class="info-card">
+            <dt>Clients (prestations réalisées)</dt>
+            <dd>Durée de la relation + <strong>10 ans</strong> (comptabilité)</dd>
+          </div>
+        </div>
+
+        <ul class="styled-list">
+          <li>
+            <strong>Données des prospects (demandes de devis restées sans suite) :</strong> conformément au référentiel de la CNIL, les données sont conservées pendant une durée maximale de <strong>trois (3) ans</strong> à compter de leur collecte ou du dernier contact émanant de votre part (par exemple, un courriel de relance ou une question sur une disponibilité). À l'issue de ces 3 ans, vos coordonnées sont définitivement purgées.
+          </li>
+          <li>
+            <strong>Données des clients (contrats et prestations exécutées) :</strong> les informations nécessaires à la gestion de votre commande sont conservées pendant toute la durée de la relation commerciale. À titre d'archivage légal, les pièces justificatives, contrats et factures sont conservés pendant <strong>dix (10) ans</strong> en conformité avec l'article L. 123-22 du Code de commerce.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECTION 6 -->
+    <article class="policy-section" id="droits">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">06</span>
+        <h2 class="section-title">Vos droits et modalités d'exercice</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Conformément aux articles 15 à 22 du Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous gardez la totale maîtrise de vos données et disposez de plusieurs droits fondamentaux :
+        </p>
+
+        <div class="rights-grid">
+          <div class="right-card">
+            <h4>Droit d'accès</h4>
+            <p>Obtenir la confirmation que vos données font l'objet d'un traitement et en recevoir une copie claire et compréhensible.</p>
+          </div>
+
+          <div class="right-card">
+            <h4>Droit de rectification</h4>
+            <p>Demander la correction ou la mise à jour immédiate de données inexactes, périmées ou incomplètes.</p>
+          </div>
+
+          <div class="right-card">
+            <h4>Droit à l'effacement</h4>
+            <p>Solliciter la suppression définitive de vos données personnelles (« droit à l'oubli »), sous réserve des obligations légales de conservation comptable.</p>
+          </div>
+
+          <div class="right-card">
+            <h4>Droit à la limitation</h4>
+            <p>Demander le gel temporaire du traitement de certaines de vos informations pendant qu'une contestation ou vérification est en cours.</p>
+          </div>
+
+          <div class="right-card">
+            <h4>Droit d'opposition</h4>
+            <p>Vous opposer à tout moment, pour des motifs légitimes, à ce que vos données soient utilisées pour un traitement particulier.</p>
+          </div>
+
+          <div class="right-card">
+            <h4>Droit à la portabilité</h4>
+            <p>Recevoir les données que vous nous avez fournies dans un format numérique structuré, lisible par machine, pour votre usage personnel ou pour un tiers.</p>
+          </div>
+        </div>
+
+        <h3>Comment exercer vos droits ?</h3>
+        <p>
+          L'exercice de vos droits est simple, gratuit et rapide. Il vous suffit d'adresser votre demande directement à <strong>Nathalie Le Magoariec</strong> :
+        </p>
+        <ul class="styled-list">
+          <li>Par courriel à : <a href="mailto:lmladecoforparty@gmail.com"><strong>lmladecoforparty@gmail.com</strong></a></li>
+          <li>Par téléphone au : <a href="tel:+33625822220"><strong>06 25 82 22 20</strong></a></li>
+        </ul>
+        <p>
+          Afin de préserver la confidentialité de vos informations et d'éviter toute usurpation, un justificatif d'identité pourra vous être demandé en cas de doute raisonnable sur votre identité. Nous nous engageons à vous répondre dans les meilleurs délais et au plus tard sous <strong>un (1) mois</strong> suivant la réception de votre demande.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            <strong>Droit de réclamation auprès de l'autorité de contrôle :</strong> Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés ou que le traitement de vos données n'est pas conforme aux règles de protection des données, vous disposez du droit d'introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) :
+            <br>
+            • En ligne sur : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">www.cnil.fr/fr/plaintes</a>
+            <br>
+            • Par courrier postal : CNIL — 3 Place de Fontenoy — TSA 80715 — 75334 PARIS CEDEX 07.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECTION 7 -->
+    <article class="policy-section" id="cookies">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">07</span>
+        <h2 class="section-title">Cookies et mesure d'audience</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Notre site web adopte une approche respectueuse et épurée de votre navigation :
+        </p>
+        <ul class="styled-list">
+          <li>
+            <strong>Aucun cookie publicitaire ni traceur commercial intrusif :</strong> nous ne déployons aucune régie publicitaire tierce, aucun pixel de reciblage (comme Meta Pixel ou Google Ads) et aucun cookie de profilage commercial.
+          </li>
+          <li>
+            <strong>Absence de cookies tiers soumis à consentement préalable :</strong> la consultation du site ne déclenche pas le dépôt de traceurs nécessitant l'affichage d'un bandeau bloquant, conformément aux critères d'exemption de la CNIL.
+          </li>
+          <li>
+            <strong>Liens externes vers les réseaux sociaux :</strong> les icônes pointant vers Instagram, TikTok et Facebook sont des liens hypertextes classiques vers des pages externes. Aucun script espion de ces plateformes n'est activé sur notre site tant que vous ne cliquez pas activement pour visiter ces réseaux.
+          </li>
+        </ul>
+        <p>
+          Vous pouvez à tout moment configurer votre navigateur internet pour bloquer, refuser ou supprimer les données de navigation enregistrées localement (options disponibles dans les paramètres de confidentialité de votre navigateur : Chrome, Safari, Firefox, Edge).
+        </p>
+      </div>
+    </article>
+
+    <!-- SECTION 8 -->
+    <article class="policy-section" id="securite">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">08</span>
+        <h2 class="section-title">Sécurité de vos données</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          La sécurité de vos données est une priorité absolue. Nous mettons en œuvre des mesures techniques et organisationnelles rigoureuses pour préserver l'intégrité, la confidentialité et la disponibilité de vos informations :
+        </p>
+        <ul class="styled-list">
+          <li>
+            <strong>Chiffrement des communications :</strong> l'ensemble du site est protégé par un certificat SSL/TLS valide (protocole <code>HTTPS</code>), garantissant que les données échangées entre votre terminal et le site ne peuvent pas être interceptées en clair.
+          </li>
+          <li>
+            <strong>Accès restreint et protégé :</strong> seules Nathalie Le Magoariec a accès aux boîtes électroniques et outils de traitement. Cet accès est verrouillé par des mots de passe robustes et renouvelés régulièrement.
+          </li>
+          <li>
+            <strong>Protection des terminaux :</strong> les appareils informatiques professionnels utilisés pour gérer vos demandes disposent de pare-feu actifs, d'antivirus à jour et de systèmes d'exploitation maintenus avec les derniers correctifs de sécurité.
+          </li>
+          <li>
+            <strong>Zéro dispersion inutile :</strong> aucune copie non sécurisée de vos coordonnées n'est conservée sur des clés USB ou supports amovibles non protégés.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECTION 9 -->
+    <article class="policy-section" id="modifications">
+      <header class="section-header">
+        <span class="section-badge" aria-hidden="true">09</span>
+        <h2 class="section-title">Modifications de la politique de confidentialité</h2>
+      </header>
+      <div class="section-content">
+        <p>
+          Cette politique de confidentialité peut être amenée à évoluer pour refléter des changements dans nos pratiques, l'intégration de nouveaux services ou toute évolution des textes législatifs et jurisprudentiels en vigueur.
+        </p>
+        <p>
+          En cas de mise à jour, la date de révision figurant en tête de page sera actualisée. Nous vous invitons à consulter cette page lors de vos visites afin de rester informé·e de nos engagements constants en matière de protection des données personnelles.
+        </p>
+      </div>
+    </article>
+
+    <!-- BANNER CONTACT DIRECT -->
+    <div class="contact-banner">
+      <h3>Une question sur vos données personnelles ?</h3>
+      <p>
+        Nathalie Le Magoariec se tient à votre entière disposition pour toute information complémentaire ou pour répondre à vos demandes relatives à vos données.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:lmladecoforparty@gmail.com" class="btn-gold">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Écrire à Nathalie</span>
+        </a>
+        <a href="tel:+33625822220" class="btn-outline-light">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>06 25 82 22 20</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================================================================== -->
+  <!-- FOOTER DU SITE -->
+  <!-- ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="LM La Déco for Party — Retour à l'accueil">
+            <img src="images/brand-logo.png" alt="Logo LM La Déco for Party" class="brand-logo" width="44" height="44">
+            <span>LM La Déco <em>for Party</em></span>
+          </a>
+          <p>
+            Décoration événementielle sur mesure pensée dans le moindre détail : mariages, anniversaires, baby showers et fêtes privées en Île-de-France et Oise.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#prestations">Prestations</a></li>
+            <li><a href="index.html#galerie">Galerie photos</a></li>
+            <li><a href="index.html#devis">Demander un devis</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivez nos créations</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lmladecoforparty?stkn=MXM3bXFiM2plYmc2cw%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram LM La Déco for Party">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@lm.la.deco.for.party?_r=1&amp;_t=ZN-99itmxqpucw" target="_blank" rel="noopener noreferrer" aria-label="TikTok LM La Déco for Party">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/share/1FpGM6w6os/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook LM La Déco for Party">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span>© 2026 LM La Déco for Party — Nathalie Le Magoariec. Tous droits réservés.</span>
+        </div>
+        <div style="display: flex; gap: 18px; align-items: center;">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <span aria-hidden="true" style="opacity: 0.4;">·</span>
+          <a href="confidentialite.html" style="color: var(--gold-light);">Politique de confidentialité</a>
+          <span aria-hidden="true" style="opacity: 0.4;">·</span>
+          <a href="index.html">Retour à l'accueil</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Revenir en haut de la page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Bouton retour en haut de page
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
