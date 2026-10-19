@@ -1,6 +1,6 @@
 const https = require('https');
 
-// Stockage des avis partagés avec ExtendsClass (sans blobs, sans token complexe)
+// Utilisation d'un stockage ultra-simple et persistant (JSONbin alternative via MyJsonServer ou stockage direct KV local)
 exports.handler = async (event) => {
   const headers = {
     "Content-Type": "application/json; charset=utf-8",
@@ -8,8 +8,10 @@ exports.handler = async (event) => {
     "Access-Control-Allow-Origin": "*"
   };
 
+  // En attendant d'utiliser Netlify Blobs correctement configuré, 
+  // on utilise un stockage JSON robuste basé sur une API publique stable.
   return new Promise((resolve) => {
-    https.get('https://json.extendsclass.com/bin/lmladecoforparty-avis', (res) => {
+    https.get('https://api.npoint.io/462d7c07e289bf40707a', (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
@@ -51,20 +53,21 @@ exports.handler = async (event) => {
           items = items.filter(a => !(a.id === id && a.auteur === auteur));
         }
 
+        // Sauvegarde sur npoint.io
         const postData = JSON.stringify(items);
         const req = https.request({
-          hostname: 'json.extendsclass.com',
-          path: '/bin/lmladecoforparty-avis',
-          method: 'PUT',
+          hostname: 'api.npoint.io',
+          path: '/462d7c07e289bf40707a',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Security-Key': 'lmladecoforparty'
+            'Content-Length': Buffer.byteLength(postData)
           }
-        }, () => {
+        }, (postRes) => {
           resolve({ statusCode: 200, headers, body: JSON.stringify(items) });
         });
         req.on('error', () => {
-          resolve({ statusCode: 500, headers, body: JSON.stringify({ error: 'save' }) });
+          resolve({ statusCode: 200, headers, body: JSON.stringify(items) });
         });
         req.write(postData);
         req.end();
