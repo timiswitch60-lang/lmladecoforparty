@@ -1,5 +1,6 @@
 const https = require('https');
 
+// Stockage des avis partagés avec ExtendsClass (sans blobs, sans token complexe)
 exports.handler = async (event) => {
   const headers = {
     "Content-Type": "application/json; charset=utf-8",
@@ -8,7 +9,7 @@ exports.handler = async (event) => {
   };
 
   return new Promise((resolve) => {
-    https.get('https://json.extendsclass.com/bin/lm-avis-for-party', (res) => {
+    https.get('https://json.extendsclass.com/bin/lmladecoforparty-avis', (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
@@ -53,7 +54,7 @@ exports.handler = async (event) => {
         const postData = JSON.stringify(items);
         const req = https.request({
           hostname: 'json.extendsclass.com',
-          path: '/bin/lm-avis-for-party',
+          path: '/bin/lmladecoforparty-avis',
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
