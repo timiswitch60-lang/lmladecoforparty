@@ -3503,19 +3503,7 @@ header.scrolled{box-shadow:0 10px 40px rgba(18,10,18,.15)}
     document.addEventListener('mouseleave', () => { trail.style.opacity = '0'; });
   })();
 
-  // ─── Images lazy load avec fade-in ───
-  (function imgFadeIn(){
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity .6s ease';
-      
-      if (img.complete) {
-        img.style.opacity = '1';
-      } else {
-        img.addEventListener('load', () => { img.style.opacity = '1'; }, { once: true });
-      }
-    });
-  })();
+
 
 })();
 </script>
