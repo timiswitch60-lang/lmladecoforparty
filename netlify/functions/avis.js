@@ -1,6 +1,8 @@
 const https = require('https');
 
-// Utilisation d'un stockage ultra-simple et persistant (JSONbin alternative via MyJsonServer ou stockage direct KV local)
+// Utilisation de Netlify Blobs natif pour stocker les avis de manière définitive et sécurisée
+const { getStore } = require("@netlify/blobs");
+
 exports.handler = async (event) => {
   const headers = {
     "Content-Type": "application/json; charset=utf-8",
@@ -8,72 +10,46 @@ exports.handler = async (event) => {
     "Access-Control-Allow-Origin": "*"
   };
 
-  // En attendant d'utiliser Netlify Blobs correctement configuré, 
-  // on utilise un stockage JSON robuste basé sur une API publique stable.
-  return new Promise((resolve) => {
-    https.get('https://api.npoint.io/462d7c07e289bf40707a', (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        let items = [];
-        try { items = JSON.parse(data); } catch(e) {}
-        if (!Array.isArray(items)) items = [];
+  try {
+    const store = getStore("avis-store");
+    let items = (await store.get("liste", { type: "json" })) || [];
+    if (!Array.isArray(items)) items = [];
 
-        if (event.httpMethod === 'GET') {
-          resolve({ statusCode: 200, headers, body: JSON.stringify(items) });
-          return;
-        }
+    if (event.httpMethod === "GET") {
+      return { statusCode: 200, headers, body: JSON.stringify(items) };
+    }
 
-        if (event.httpMethod !== 'POST') {
-          resolve({ statusCode: 405, headers, body: '[]' });
-          return;
-        }
+    if (event.httpMethod !== "POST") {
+      return { statusCode: 405, headers, body: "[]" };
+    }
 
-        let body = {};
-        try { body = JSON.parse(event.body || '{}'); } catch(e) {}
+    let body = {};
+    try { body = JSON.parse(event.body || "{}"); } catch (e) {}
 
-        if (body.action === 'add' && body.avis) {
-          const avis = body.avis;
-          const item = {
-            id: String(avis.id || Date.now()),
-            auteur: String(avis.auteur || ''),
-            nom: String(avis.nom || '').trim().slice(0, 40),
-            occasion: String(avis.occasion || '').trim().slice(0, 60),
-            note: Math.max(1, Math.min(5, parseInt(avis.note, 10) || 5)),
-            texte: String(avis.texte || '').trim().slice(0, 500)
-          };
-          if (!item.nom || !item.texte || !item.auteur) {
-            resolve({ statusCode: 400, headers, body: JSON.stringify({ error: 'invalid' }) });
-            return;
-          }
-          items = items.filter(a => a.id !== item.id).concat(item).slice(-100);
-        } else if (body.action === 'delete') {
-          const id = String(body.id || '');
-          const auteur = String(body.auteur || '');
-          items = items.filter(a => !(a.id === id && a.auteur === auteur));
-        }
+    if (body.action === "add" && body.avis) {
+      const avis = body.avis;
+      const item = {
+        id: String(avis.id || Date.now()),
+        auteur: String(avis.auteur || ''),
+        nom: String(avis.nom || '').trim().slice(0, 40),
+        occasion: String(avis.occasion || '').trim().slice(0, 60),
+        note: Math.max(1, Math.min(5, parseInt(avis.note, 10) || 5)),
+        texte: String(avis.texte || '').trim().slice(0, 500)
+      };
+      if (item.nom && item.texte && item.auteur) {
+        // Évite les doublons et ajoute l'avis
+        items = items.filter(a => a.id !== item.id).concat(item).slice(-100);
+        await store.setJSON("liste", items);
+      }
+    } else if (body.action === "delete") {
+      const id = String(body.id || '');
+      const auteur = String(body.auteur || '');
+      items = items.filter(a => !(a.id === id && a.auteur === auteur));
+      await store.setJSON("liste", items);
+    }
 
-        // Sauvegarde sur npoint.io
-        const postData = JSON.stringify(items);
-        const req = https.request({
-          hostname: 'api.npoint.io',
-          path: '/462d7c07e289bf40707a',
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Content-Length': Buffer.byteLength(postData)
-          }
-        }, (postRes) => {
-          resolve({ statusCode: 200, headers, body: JSON.stringify(items) });
-        });
-        req.on('error', () => {
-          resolve({ statusCode: 200, headers, body: JSON.stringify(items) });
-        });
-        req.write(postData);
-        req.end();
-      });
-    }).on('error', () => {
-      resolve({ statusCode: 200, headers, body: JSON.stringify([]) });
-    });
-  });
+    return { statusCode: 200, headers, body: JSON.stringify(items) };
+  } catch (err) {
+    return { statusCode: 500, headers, body: JSON.stringify({ error: 'storage' }) };
+  }
 };
